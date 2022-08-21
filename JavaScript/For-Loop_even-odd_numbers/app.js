@@ -11,15 +11,16 @@
 // console.log(x % 2);
 
 // even numbers Loop
-for (var i = 0; i <= 100; i++) {
+console.log("Even Numbers")
+for (let i = 1; i <= 100; i++) {
   if (i % 2 == 0) {
     console.log(i);
   }
 }
-
+console.log("Odd Numbers")
 // odd numbers Loop
-// for (var i = 0; i <= 100; i++) {
-//   if (i % 2) {
-//     console.log(i);
-//   }
-// }
+for (var i = 0; i <= 100; i++) {
+  if (i % 2) {
+    console.log(i);
+  }
+}
