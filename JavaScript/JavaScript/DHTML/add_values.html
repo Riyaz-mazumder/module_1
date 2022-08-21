@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" style="width:30px" id="a" />
+    <select id="o">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+    </select>
+    <input type="text" style="width:30px" id="b" />
+    <input type="button" value="=" onclick="cal()" />
+    <input type="text" id="display" style="width:30px"  />
+    <script>
+
+     function cal(){
+        var a=document.getElementById("a").value;
+            a=parseFloat(a);
+
+        var o=document.getElementById("o").value;
+
+        var b=document.getElementById("b").value;
+            b=parseFloat(b);
+        /*
+        if(o=="+"){
+          var z=a+b;
+        }else if(o=="-"){
+          var z=a-b;
+        }else if(o=="*"){
+          var z=a*b;
+        }else if(o=="/"){
+          var z=a/b;
+        }
+        */
+       
+       var z=eval(a+o+b);
+        
+        document.getElementById("display").value=z;
+     }
+
+
+
+    </script>
+  
+</body>
+</html>

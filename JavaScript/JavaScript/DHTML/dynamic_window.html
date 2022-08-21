@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{display: flex;margin-bottom: 10px;}
+        label{width: 110px;}
+    </style>
+</head>
+<body>
+    <form name="f">
+        <div>
+            <label>Name</label>
+            <input type="text" id="name"  />
+        </div>
+        <div>
+            <label>Mobile</label>
+            <input type="text" id="mobile"  />
+        </div>
+        <div>
+            <label>City</label>
+           <select id="city">
+               <option>Dhaka</option>
+               <option>Khulna</option>
+           </select>
+        </div>
+        <div>
+            <label>Gender</label>
+            <input type="radio"  name="gender" value="Male" /> Male
+            <input type="radio"  name="gender" value="Female" /> Female
+            <input type="radio"  name="gender" value="Other" /> Other
+        </div>
+        <div>
+            <label>Food Chart</label>
+            <input type="checkbox"  name="foods" value="Rice" /> Rice
+            <input type="checkbox"  name="foods" value="Ruti" /> Ruti
+            <input type="checkbox"  name="foods" value="Fish" /> Fish
+        </div>
+        <div>
+            <label>Address</label>
+            <textarea id="address"></textarea>
+        </div>
+
+
+        <input type="button" value="Submit" onclick="show()" />
+    </form>
+    
+
+    <script>
+        function show(){
+
+            //Read Data from Form
+          var name=document.getElementById("name").value;
+          var mobile=document.getElementById("mobile").value;
+          var city=document.getElementById("city").value;
+          var address=document.getElementById("address").value;
+
+        
+          let food_chart="";
+          let gender;
+          
+          for(var g of document.f.gender){
+                 if(g.checked){
+                   gender=g.value;
+                 }
+          }   
+          
+          for(var food of document.f.foods){
+                 if(food.checked){
+                    food_chart+=food.value+",";
+                 }
+          }   
+        
+         
+        //--------Output-----------//
+         /*
+          var w=300;
+          var h=300;
+
+          var hc=screen.width/2 - w/2;
+          var vc=screen.height/2 -h/2-100;
+
+          var w=open("","",`width=${w},height=${h},left=${hc},top=${vc}`);//popup window
+          */
+
+          var w=open("","",`width=300,height=300`);//popup window ,w for new window object
+          
+           w.document.write("Name:"+name);
+           w.document.write("<br>Mobile:"+mobile);
+           w.document.write("<br>City:"+city);
+           w.document.write("<br>Address:"+address);
+           w.document.write("<br>Gender:"+gender);           
+           w.document.write("<br>Food chart:"+food_chart);
+
+        
+           
+            with(w.document){            
+                    write("Name:"+name);
+                    write("<br>Mobile:"+mobile);
+                    write("<br>City:"+city);
+                    write("<br>Address:"+address);
+                    write("<br>Gender:"+gender);           
+                    write("<br>Food chart:"+food_chart);
+            }
+           
+
+           //w.document.write("<br><a href='#' onclick='self.print()'>Print</a>");
+
+        }//end function
+
+    </script>
+</body>
+</html>

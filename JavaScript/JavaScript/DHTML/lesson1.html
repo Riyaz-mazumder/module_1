@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name"  />
+    <input type="button" value="Show" onclick="show()" />
+
+    <script>
+        function show(){
+          var x=document.getElementById("name").value;
+         
+          var w=300;
+          var h=300;
+
+          var hc=screen.width/2 - w/2;
+          var vc=screen.height/2 -h/2-100;
+
+          //var w=open("","","width="+w+",height="+h+",left="+hc+",top="+vc);//popup window
+
+          var w=open("","",`width=${w},height=${h},left=${hc},top=${vc}`);//popup window
+
+           //w.document.write(x);
+
+        }
+
+    </script>
+</body>
+</html>

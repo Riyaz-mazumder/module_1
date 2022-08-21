@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        #room{
+          display: flex;
+        }
+        .switch{
+          width:110px;
+          height:110px;
+          background-image: url('img.jpg');
+          background-position: -10px -20px;    
+          cursor: pointer;     
+        }
+        .switch-on{
+            background-position: -11px -186px;
+        }
+
+        .light{
+            width:110px;
+            height:110px;
+            background-image: url('img.jpg');
+            background-position: -215px -20px;    
+            cursor: pointer;     
+        }
+
+        .light-on{
+            background-position: -216px -186px;
+        }
+     </style>
+</head>
+<body>
+
+    <div id="room">
+        <div class="switch"></div>
+        <div class="light"></div>
+    </div>
+
+
+    <script>
+        var button=document.querySelector(".switch");
+        var light=document.querySelector(".light");
+
+        button.addEventListener('click',()=>{
+
+            button.classList.toggle("switch-on");
+            light.classList.toggle("light-on");
+
+        });
+       
+        
+    </script>
+</body>
+</html>
