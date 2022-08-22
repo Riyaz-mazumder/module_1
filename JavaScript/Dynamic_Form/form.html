@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form action="#" method="post">
+      <div>
+        <label>Name</label>
+        <input type="text" id="name" />
+      </div>
+      <div>
+        <label>Mobile</label>
+        <input type="text" id="mobile" />
+      </div>
+      <div>
+        <label>City</label>
+        <select id="city">
+          <option>Dhaka</option>
+          <option>Khulna</option>
+        </select>
+      </div>
+      <div>
+        <label>Gender</label>
+        <input type="radio" name="gender" value="Male" /> Male
+        <input type="radio" name="gender" value="Female" /> Female
+        <input type="radio" name="gender" value="Other" /> Other
+      </div>
+      <div>
+        <label>Food Chart</label>
+        <input type="checkbox" name="foods" value="Rice" /> Rice
+        <input type="checkbox" name="foods" value="Ruti" /> Ruti
+        <input type="checkbox" name="foods" value="Fish" /> Fish
+      </div>
+      <div>
+        <label>Address</label>
+        <textarea id="address"></textarea>
+      </div>
+
+      <input type="button" value="Submit" id="submit" />
+    </form>
+    <!-- JavaScript -->
+    <script>
+      // select input value
+      const name = document.querySelector('#name').value;
+      const mobile = document.querySelector('#mobile').value;
+      const city = document.querySelector('#city').value;
+      const address = document.querySelector('#address').value;
+      const submit = document.querySelector('#submit');
+
+      submit.addEventListener('click', () => {
+        console.log(name);
+      });
+    </script>
+  </body>
+</html>
