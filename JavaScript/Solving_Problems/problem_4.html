@@ -9,11 +9,55 @@
   <body>
     <!-- JavaScript -->
     <script>
-      let prime_Num = Number(prompt('Enter A Number'));
+      // let prime_Num = Number(prompt('Enter A Number'));
 
-      if (prime_Num % 1 == 0 && prime_Num % prime_Num == 0) {
-        window.alert(' its Is a prime number');
+      // if (prime_Num % 2 == 0) {
+      //   console.log(`${prime_Num} not a prime number`);
+      // } else {
+      //   console.log(`${prime_Num} Is Prime number`);
+      // }
+
+      // Experimental Code
+      let number = Number(prompt('Enter A Number'));
+
+      for (let i = 2; i < number; i++) {
+        if (number % i == 0) {
+          console.log(number);
+        }
       }
+
+      // program to check if a number is prime or not
+
+      // take input from the user
+      // const number = parseInt(prompt('Enter a positive number: '));
+      // let isPrime = true;
+
+      // // check if number is equal to 1
+      // if (number === 1) {
+      //   console.log('1 is neither prime nor composite number.');
+      // }
+
+      // // check if number is greater than 1
+      // else if (number > 1) {
+      //   // looping through 2 to number-1
+      //   for (let i = 2; i < number; i++) {
+      //     if (number % i == 0) {
+      //       isPrime = false;
+      //       break;
+      //     }
+      //   }
+
+      //   if (isPrime) {
+      //     console.log(`${number} is a prime number`);
+      //   } else {
+      //     console.log(`${number} is a not prime number`);
+      //   }
+      // }
+
+      // // check if number is less than 1
+      // else {
+      //   console.log('The number is not a prime number.');
+      // }
     </script>
   </body>
 </html>
