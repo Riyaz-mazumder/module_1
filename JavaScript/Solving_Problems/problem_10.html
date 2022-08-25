@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#">
+      <input id="email" type="email" />
+      <input id="password" type="password" />
+      <buttons id="btn">Submit</button>
+    </form>
+    <!-- JavaScript -->
+    <script>
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const btn = document.getElementById('btn')
+        btn.addEventListener("click", function(){
+           if(email.value.includes('@', '.')){
+            console.log("Email contains @ and a .")
+           }else{
+            alert("@ and a .: Required")
+           }
+
+           if(password.value.length >= 7){
+            console.log("password contains 7 characters")
+        }else{
+            alert("Password must be 7 characters")
+        }
+        });
+       
+    </script>
+  </body>
+</html>
