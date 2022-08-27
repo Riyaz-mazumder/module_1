@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prime numbers</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- JavaScript -->
     <script>
-        // 5
-        let number = prompt("Enter a number")
-        if(number <= 1){
-            document.write(`${number} Not a prime Number`)
-        }else if(number == 2){
-            document.write(`${number} Is a prime Number`)
-        }else{
-           for(var i =2; i<number; i++){
-            if(number%i ==0){
-                var res = `${number} Not a prime Number`
-                break;
-            }
-            else{
-              var res =  `${number} Is a prime Number`
-            }
-           
-           }
-           document.write(res, and)
-        }document
+      // 5
+      let number = prompt('Enter a number');
+      var arr = [];
+      if (number <= 1) {
+        document.write(`${number} Not a prime Number`);
+      } else if (number == 2) {
+        document.write(`${number} Is a prime Number`);
+      } else {
+        for (var i = 2; i < number; i++) {
+          if (number % i == 0) {
+            arr.push(i);
+          }
+        }
+        for (var i = 2; i < number; i++) {
+          if (number % i == 0) {
+            var res = `${number} Not a prime Number since it's divided by ${arr}`;
+            break;
+          } else {
+            var res = `${number} Is a prime Number`;
+          }
+        }
+
+        document.write(res);
+      }
     </script>
-</body>
+  </body>
 </html>

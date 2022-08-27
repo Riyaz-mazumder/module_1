@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var number = Number(prompt('Enter Your Total Spend'));
+
+      if (number >= 100 && number <= 300) {
+        document.write(`You got ${(number / 100) * 10} Tk discount`);
+      } else if (number > 300 && number <= 700) {
+        document.write(`You got ${(number / 100) * 15} Tk discount`);
+      } else if (number > 700 && number <= 1000) {
+        document.write(`You got ${(number / 100) * 20} Tk discount`);
+      } else if (number > 1000) {
+        document.write(`You got ${(number / 100) * 25} Tk discount`);
+      } else {
+        document.write(
+          'Sorry No discount for You! To get discount you must have to bye more then 100 Tk'
+        );
+      }
+    </script>
+  </body>
+</html>

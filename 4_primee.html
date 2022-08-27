@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Prime</title>
+    <script type="text/javascript">
+      var a = parseInt(prompt('Enter a number:', ''));
+      var divisors = new Array();
+
+      if (a > 3) {
+        for (var i = 2; i < a; i++) {
+          if (a % i == 0) {
+            divisors.push(i);
+          }
+        }
+      }
+
+      if (divisors.length > 0) {
+        document.write(
+          a + ' is not a prime number since it is divisible by :<br>1,'
+        );
+        document.write(divisors + ' and ' + a);
+      } else if (a < 2) {
+        document.write(a + ' is a not a prime number');
+      } else {
+        document.write(a + ' is a prime number');
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
